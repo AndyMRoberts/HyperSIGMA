@@ -1,3 +1,5 @@
 weights/*
 *.pyc
 *.pth
+ImageClassification/result/20261113_155501_spatsigma/loss_base.png
+*.png

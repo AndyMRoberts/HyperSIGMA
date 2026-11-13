@@ -1,0 +1,1 @@
+Running with added validation loss, same hyperparameters as initial notebook.

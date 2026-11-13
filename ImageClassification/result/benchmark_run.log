@@ -1,0 +1,756 @@
+=== Fri 13 Nov 14:35:18 GMT 2026 queued ===
+Python: /home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/bin/python
+Waiting until no process is using the GPU.
+=== Fri 13 Nov 14:35:18 GMT 2026 GPU free, starting SpatSigma ===
+usage: jupyter [-h] [--version] [--config-dir] [--data-dir] [--runtime-dir]
+               [--paths] [--json] [--debug]
+               [subcommand]
+
+Jupyter: Interactive Computing
+
+positional arguments:
+  subcommand     the subcommand to launch
+
+options:
+  -h, --help     show this help message and exit
+  --version      show the versions of core jupyter packages and exit
+  --config-dir   show Jupyter config dir
+  --data-dir     show Jupyter data dir
+  --runtime-dir  show Jupyter runtime dir
+  --paths        show all Jupyter paths. Add --json for machine-readable
+                 format.
+  --json         output paths as machine-readable json
+  --debug        output debug information about paths
+
+Available subcommands: kernel kernelspec migrate run troubleshoot
+
+Jupyter command `jupyter-nbconvert` not found.
+=== Fri 13 Nov 14:37:19 GMT 2026 queued ===
+Python: /home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/bin/python
+Waiting until no process is using the GPU.
+=== Fri 13 Nov 14:37:19 GMT 2026 GPU free, starting SpatSigma ===
+[NbConvertApp] Converting notebook demo cls spatsigma.ipynb to notebook
+Traceback (most recent call last):
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/__main__.py", line 5, in <module>
+    main()
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/jupyter_core/application.py", line 284, in launch_instance
+    super().launch_instance(argv=argv, **kwargs)
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+    app.start()
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+    self.convert_notebooks()
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+    output, resources = self.export_single_notebook(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+    nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+    return self.preprocess(nb, resources)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/preprocessors/execute.py", line 103, in preprocess
+    self.preprocess_cell(cell, resources, index)
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbconvert/preprocessors/execute.py", line 124, in preprocess_cell
+    cell = self.execute_cell(cell, index, store_history=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/campus.ncl.ac.uk/c4071391/.local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import os
+import pandas as pd
+import time
+from datetime import datetime
+import gc
+
+gc.collect()
+torch.cuda.empty_cache()
+
+results = []
+max_epoch = 1
+patience = 10
+timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+run_dir = f'{path_result}{timestamp}_spatsigma'
+os.makedirs(run_dir, exist_ok=True)
+
+notes = 'Running with added validation loss, same hyperparameters as initial notebook.'
+with open(f'{run_dir}/notes.txt', 'w') as f:
+    f.write(notes + '\n')
+
+
+for size in ['base', 'large']: # huge has memory issue
+    # weights/hypersigma/spat-vit-base-ultra-checkpoint-1599.pth
+    model_path = f"../weights/hypersigma/spat-vit-{size}-ultra-checkpoint-1599.pth"
+    if size == 'base':
+        embed_dim = 768
+        depth = 12
+        num_heads=12
+        out_indices = [3, 5, 7, 11]
+    elif size == 'large':
+        embed_dim = 1024
+        depth = 24
+        num_heads=16
+        out_indices = [7, 11, 15, 23]
+    elif size == 'huge':
+        embed_dim = 1280
+        depth = 32
+        num_heads=16
+        out_indices = [10, 15, 20, 31]
+
+    model = SpatViT_cls.SpatViT (img_size=img_size,
+                num_classes = class_num+1,
+                in_chans=pca_components,
+                patch_size=patch_size,
+                drop_path_rate=0.1,
+                out_indices=out_indices,
+                embed_dim=embed_dim,
+                depth=depth,
+                num_heads=num_heads,
+                mlp_ratio=4,
+                qkv_bias=True,
+                qk_scale=None,
+                drop_rate=0.,
+                attn_drop_rate=0.,
+                use_checkpoint=True,
+                use_abs_pos_emb=True,
+                interval=3,
+                n_points=8)
+    per_net = torch.load((model_path), map_location=torch.device('cpu'), weights_only=False)
+    model_params = model.state_dict()
+    for k in list(per_net['model'].keys()):
+        if 'patch_embed.proj' in k:
+            del per_net['model'][k]
+        if 'pos_embed' in k:
+            del per_net['model'][k]
+    same_parsms = {k: v for k, v in per_net['model'].items() if k in model_params.keys()}
+    model_params.update(same_parsms)
+    model.load_state_dict(model_params)
+
+    same_parsms
+    optim_wrapper = dict(
+        optimizer=dict(
+        type='AdamW', lr=6e-5, betas=(0.9, 0.999), weight_decay=0.05),
+        constructor='LayerDecayOptimizerConstructor_ViT', 
+        paramwise_cfg=dict(
+            num_layers=depth, 
+            layer_decay_rate=0.9,
+            )
+            )
+    optimizer = build_optim_wrapper(model, optim_wrapper)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer.optimizer, max_epoch, eta_min=0, last_epoch=-1)
+    criterion = nn.CrossEntropyLoss()
+    model.to(device)
+    best_loss = float('inf')
+    epochs_without_improvement = 0
+    train_losses = []
+    val_losses = []
+    epoch_durations = []
+    total_train_time_start = time.time()
+    for epoch in range(max_epoch + 1):
+        start_time = time.time()
+        correct = 0
+        total = 0
+        test_correct = 0
+        test_total = 0
+        _train_loss = 0
+        n_train = 0
+        model.train()
+        for x, y in train_loader:
+            if torch.cuda.is_available():
+                x, y = x.to(device), y.to(device)
+            y_pred = model(x)
+            train_loss = criterion(y_pred, y)
+            optimizer.zero_grad()
+            train_loss.backward()
+            optimizer.step()
+            _train_loss += train_loss.item() * y.size(0)
+            n_train += y.size(0)
+
+            with torch.no_grad():
+                y_pred = torch.argmax(y_pred, dim=1)
+                correct = (y_pred == y).sum().item()
+                total = y.size(0)
+
+        epoch_loss = _train_loss / n_train
+        epoch_accuracy = correct / total
+        train_losses.append(epoch_loss)
+        epoch_durations.append(time.time() - start_time)
+
+        model.eval()
+        _val_loss = 0
+        n_val = 0
+        with torch.no_grad():
+            for x, y in val_loader:
+                if torch.cuda.is_available():
+                    x, y = x.to(device), y.to(device)
+                val_pred = model(x)
+                val_loss = criterion(val_pred, y)
+                _val_loss += val_loss.item() * y.size(0)
+                n_val += y.size(0)
+        val_epoch_loss = _val_loss / n_val
+        val_losses.append(val_epoch_loss)
+
+        if val_epoch_loss < best_loss:
+            best_loss = val_epoch_loss
+            epochs_without_improvement = 0
+            torch.save(model.state_dict(), path_weight + "spat_" + size + "_model.pth")
+            torch.save(optimizer.state_dict(), path_weight + "spat_" + size + '_optimizer.pth')
+            print('save model')
+        else:
+            epochs_without_improvement += 1
+
+        if epoch % 10 == 0 or epochs_without_improvement >= patience:
+            print(
+                'model:', size,
+                'epoch:', epoch,
+                'train loss:', round(epoch_loss, 5),
+                'val loss:', round(val_epoch_loss, 5),
+                'accuracy:', round(epoch_accuracy, 5),
+            )
+
+        if epochs_without_improvement >= patience:
+            print('early stopping at epoch', epoch)
+            break
+
+    fig, ax = plt.subplots(figsize=(8, 4))
+    ax.plot(range(len(train_losses)), train_losses, label='train')
+    ax.plot(range(len(val_losses)), val_losses, label='validation')
+    ax.set_xlabel('epoch')
+    ax.set_ylabel('loss')
+    ax.set_title(f'{size} train and validation loss')
+    ax.legend()
+    fig.tight_layout()
+    fig.savefig(f'{run_dir}/loss_{size}.png', dpi=150)
+    plt.show()
+
+    count = 0
+    model.load_state_dict(torch.load(path_weight + r"model.pth"))
+    model.eval()
+    with torch.no_grad():
+        for x, y  in test_loader:
+            if torch.cuda.is_available():
+                x, y = x.to(device), y.to(device)
+            inference_start = time.time()
+            output = model(x)
+            inference_time = time.time() - inference_start
+            y_pred = torch.argmax(output, dim=1)
+            test_correct += (y_pred == y).sum().item()
+            test_total += y.size(0)
+
+            # np。concatenate 不能拼接空数组，所以这里在第一个的时候不拼接，后面的时候才拼接
+            if count == 0:
+                y_pred_test =  y_pred.cpu().numpy()
+                y_gt_test = y.cpu().numpy()
+                count = 1
+            else:
+                y_pred_test = np.concatenate( (y_pred_test, y_pred.cpu().numpy()) )
+                y_gt_test = np.concatenate( (y_gt_test, y.cpu().numpy()) )
+
+    overall_acc = metrics.accuracy_score(y_pred_test, y_gt_test)
+    confusion_matrix = metrics.confusion_matrix(y_pred_test, y_gt_test)
+    each_acc, average_acc = utils.aa_and_each_accuracy(confusion_matrix)
+    kappa = metrics.cohen_kappa_score(y_pred_test, y_gt_test)
+    OA_HybirdSN = test_correct / test_total
+    print("test OA={:.4f}".format(overall_acc))
+    print('kappa=',kappa)
+    print('each_acc=',each_acc)
+    print('average_acc=',average_acc)
+
+    time_per_epoch = float(np.mean(epoch_durations))
+    epochs_run = len(epoch_durations)
+    total_time = time.time() - total_train_time_start
+
+    results.append({
+        "size": size, 
+        "epochs": epochs_run,
+        "best val loss": best_loss,
+        "OA": overall_acc,
+        "AA": average_acc,
+        "kappa": kappa,
+        "time per epoch": time_per_epoch,
+        "total time": total_time,
+        "inference time": inference_time,
+        "OA/time": overall_acc / time_per_epoch,
+    })
+
+# One row per seed; the summary is mean and std (pandas default ddof=1) across seeds.
+df = pd.DataFrame(results)
+df.to_csv(f'{run_dir}/benchmarking.csv')
+display(df)
+
+------------------
+
+----- stdout -----
+8
+8
+----- stdout -----
+8
+----- stdout -----
+8
+8
+8
+8
+----- stdout -----
+8
+----- stdout -----
+{'num_layers': 12, 'layer_decay_rate': 0.9}
+Build LayerDecayOptimizerConstructor 0.900000 - 14
+Param groups = {
+  "layer_13_no_decay": {
+    "param_names": [
+      "pos_embed",
+      "cls.bias",
+      "classifier.0.bias",
+      "classifier.1.bias",
+      "classifier.2.bias",
+      "patch_embed.proj.bias",
+      "blocks.0.norm1.weight",
+      "blocks.0.norm1.bias",
+      "blocks.0.attn.qkv.bias",
+      "blocks.0.attn.sampling_offsets.bias",
+      "blocks.0.attn.proj.bias",
+      "blocks.0.norm2.weight",
+      "blocks.0.norm2.bias",
+      "blocks.0.mlp.fc1.bias",
+      "blocks.0.mlp.fc2.bias",
+      "blocks.1.norm1.weight",
+      "blocks.1.norm1.bias",
+      "blocks.1.attn.qkv.bias",
+      "blocks.1.attn.sampling_offsets.bias",
+      "blocks.1.attn.proj.bias",
+      "blocks.1.norm2.weight",
+      "blocks.1.norm2.bias",
+      "blocks.1.mlp.fc1.bias",
+      "blocks.1.mlp.fc2.bias",
+      "blocks.2.norm1.weight",
+      "blocks.2.norm1.bias",
+      "blocks.2.attn.qkv.bias",
+      "blocks.2.attn.proj.bias",
+      "blocks.2.norm2.weight",
+      "blocks.2.norm2.bias",
+      "blocks.2.mlp.fc1.bias",
+      "blocks.2.mlp.fc2.bias",
+      "blocks.3.norm1.weight",
+      "blocks.3.norm1.bias",
+      "blocks.3.attn.qkv.bias",
+      "blocks.3.attn.sampling_offsets.bias",
+      "blocks.3.attn.proj.bias",
+      "blocks.3.norm2.weight",
+      "blocks.3.norm2.bias",
+      "blocks.3.mlp.fc1.bias",
+      "blocks.3.mlp.fc2.bias",
+      "blocks.4.norm1.weight",
+      "blocks.4.norm1.bias",
+      "blocks.4.attn.qkv.bias",
+      "blocks.4.attn.sampling_offsets.bias",
+      "blocks.4.attn.proj.bias",
+      "blocks.4.norm2.weight",
+      "blocks.4.norm2.bias",
+      "blocks.4.mlp.fc1.bias",
+      "blocks.4.mlp.fc2.bias",
+      "blocks.5.norm1.weight",
+      "blocks.5.norm1.bias",
+      "blocks.5.attn.qkv.bias",
+      "blocks.5.attn.proj.bias",
+      "blocks.5.norm2.weight",
+      "blocks.5.norm2.bias",
+      "blocks.5.mlp.fc1.bias",
+      "blocks.5.mlp.fc2.bias",
+      "blocks.6.norm1.weight",
+      "blocks.6.norm1.bias",
+      "blocks.6.attn.qkv.bias",
+      "blocks.6.attn.sampling_offsets.bias",
+      "blocks.6.attn.proj.bias",
+      "blocks.6.norm2.weight",
+      "blocks.6.norm2.bias",
+      "blocks.6.mlp.fc1.bias",
+      "blocks.6.mlp.fc2.bias",
+      "blocks.7.norm1.weight",
+      "blocks.7.norm1.bias",
+      "blocks.7.attn.qkv.bias",
+      "blocks.7.attn.sampling_offsets.bias",
+      "blocks.7.attn.proj.bias",
+      "blocks.7.norm2.weight",
+      "blocks.7.norm2.bias",
+      "blocks.7.mlp.fc1.bias",
+      "blocks.7.mlp.fc2.bias",
+      "blocks.8.norm1.weight",
+      "blocks.8.norm1.bias",
+      "blocks.8.attn.qkv.bias",
+      "blocks.8.attn.proj.bias",
+      "blocks.8.norm2.weight",
+      "blocks.8.norm2.bias",
+      "blocks.8.mlp.fc1.bias",
+      "blocks.8.mlp.fc2.bias",
+      "blocks.9.norm1.weight",
+      "blocks.9.norm1.bias",
+      "blocks.9.attn.qkv.bias",
+      "blocks.9.attn.sampling_offsets.bias",
+      "blocks.9.attn.proj.bias",
+      "blocks.9.norm2.weight",
+      "blocks.9.norm2.bias",
+      "blocks.9.mlp.fc1.bias",
+      "blocks.9.mlp.fc2.bias",
+      "blocks.10.norm1.weight",
+      "blocks.10.norm1.bias",
+      "blocks.10.attn.qkv.bias",
+      "blocks.10.attn.sampling_offsets.bias",
+      "blocks.10.attn.proj.bias",
+      "blocks.10.norm2.weight",
+      "blocks.10.norm2.bias",
+      "blocks.10.mlp.fc1.bias",
+      "blocks.10.mlp.fc2.bias",
+      "blocks.11.norm1.weight",
+      "blocks.11.norm1.bias",
+      "blocks.11.attn.qkv.bias",
+      "blocks.11.attn.proj.bias",
+      "blocks.11.norm2.weight",
+      "blocks.11.norm2.bias",
+      "blocks.11.mlp.fc1.bias",
+      "blocks.11.mlp.fc2.bias",
+      "norm.weight",
+      "norm.bias",
+      "fpn1.0.bias"
+    ],
+    "lr_scale": 1.0,
+    "lr": 6e-05,
+    "weight_decay": 0.0
+  },
+  "layer_13_decay": {
+    "param_names": [
+      "DR.weight",
+      "cls.weight",
+      "classifier.0.weight",
+      "classifier.1.weight",
+      "classifier.2.weight",
+      "patch_embed.proj.weight",
+      "blocks.0.attn.qkv.weight",
+      "blocks.0.attn.sampling_offsets.weight",
+      "blocks.0.attn.proj.weight",
+      "blocks.0.mlp.fc1.weight",
+      "blocks.0.mlp.fc2.weight",
+      "blocks.1.attn.qkv.weight",
+      "blocks.1.attn.sampling_offsets.weight",
+      "blocks.1.attn.proj.weight",
+      "blocks.1.mlp.fc1.weight",
+      "blocks.1.mlp.fc2.weight",
+      "blocks.2.attn.qkv.weight",
+      "blocks.2.attn.proj.weight",
+      "blocks.2.mlp.fc1.weight",
+      "blocks.2.mlp.fc2.weight",
+      "blocks.3.attn.qkv.weight",
+      "blocks.3.attn.sampling_offsets.weight",
+      "blocks.3.attn.proj.weight",
+      "blocks.3.mlp.fc1.weight",
+      "blocks.3.mlp.fc2.weight",
+      "blocks.4.attn.qkv.weight",
+      "blocks.4.attn.sampling_offsets.weight",
+      "blocks.4.attn.proj.weight",
+      "blocks.4.mlp.fc1.weight",
+      "blocks.4.mlp.fc2.weight",
+      "blocks.5.attn.qkv.weight",
+      "blocks.5.attn.proj.weight",
+      "blocks.5.mlp.fc1.weight",
+      "blocks.5.mlp.fc2.weight",
+      "blocks.6.attn.qkv.weight",
+      "blocks.6.attn.sampling_offsets.weight",
+      "blocks.6.attn.proj.weight",
+      "blocks.6.mlp.fc1.weight",
+      "blocks.6.mlp.fc2.weight",
+      "blocks.7.attn.qkv.weight",
+      "blocks.7.attn.sampling_offsets.weight",
+      "blocks.7.attn.proj.weight",
+      "blocks.7.mlp.fc1.weight",
+      "blocks.7.mlp.fc2.weight",
+      "blocks.8.attn.qkv.weight",
+      "blocks.8.attn.proj.weight",
+      "blocks.8.mlp.fc1.weight",
+      "blocks.8.mlp.fc2.weight",
+      "blocks.9.attn.qkv.weight",
+      "blocks.9.attn.sampling_offsets.weight",
+      "blocks.9.attn.proj.weight",
+      "blocks.9.mlp.fc1.weight",
+      "blocks.9.mlp.fc2.weight",
+      "blocks.10.attn.qkv.weight",
+      "blocks.10.attn.sampling_offsets.weight",
+      "blocks.10.attn.proj.weight",
+      "blocks.10.mlp.fc1.weight",
+      "blocks.10.mlp.fc2.weight",
+      "blocks.11.attn.qkv.weight",
+      "blocks.11.attn.proj.weight",
+      "blocks.11.mlp.fc1.weight",
+      "blocks.11.mlp.fc2.weight",
+      "fpn1.0.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 6e-05,
+    "weight_decay": 0.05
+  }
+}
+----- stderr -----
+/home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/lib/python3.12/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/TensorShape.cpp:4207.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/lib/python3.12/site-packages/torch/_dynamo/eval_frame.py:1552: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In a future release, calling checkpoint without use_reentrant will raise an exception. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+----- stderr -----
+/home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/lib/python3.12/site-packages/torch/utils/checkpoint.py:242: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  check_backward_validity(args)
+----- stdout -----
+save model
+model: base epoch: 0 train loss: 2.88439 val loss: 2.7879 accuracy: 0.0625
+----- stdout -----
+save model
+------------------
+
+[31m---------------------------------------------------------------------------[39m
+[31mRuntimeError[39m                              Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[13][39m[32m, line 168[39m
+[32m    165[39m plt.show()
+[32m    167[39m count = [32m0[39m
+[32m--> [39m[32m168[39m [43mmodel[49m[43m.[49m[43mload_state_dict[49m[43m([49m[43mtorch[49m[43m.[49m[43mload[49m[43m([49m[43mpath_weight[49m[43m [49m[43m+[49m[43m [49m[33;43mr[39;49m[33;43m"[39;49m[33;43mmodel.pth[39;49m[33;43m"[39;49m[43m)[49m[43m)[49m
+[32m    169[39m model.eval()
+[32m    170[39m [38;5;28;01mwith[39;00m torch.no_grad():
+
+[36mFile [39m[32m~/miniconda3/envs/hyperfm/lib/python3.12/site-packages/torch/nn/modules/module.py:2647[39m, in [36mModule.load_state_dict[39m[34m(self, state_dict, strict, assign)[39m
+[32m   2639[39m         error_msgs.insert(
+[32m   2640[39m             [32m0[39m,
+[32m   2641[39m             [33m"[39m[33mMissing key(s) in state_dict: [39m[38;5;132;01m{}[39;00m[33m. [39m[33m"[39m.format(
+[32m   2642[39m                 [33m"[39m[33m, [39m[33m"[39m.join([33mf[39m[33m'[39m[33m"[39m[38;5;132;01m{[39;00mk[38;5;132;01m}[39;00m[33m"[39m[33m'[39m [38;5;28;01mfor[39;00m k [38;5;129;01min[39;00m missing_keys)
+[32m   2643[39m             ),
+[32m   2644[39m         )
+[32m   2646[39m [38;5;28;01mif[39;00m [38;5;28mlen[39m(error_msgs) > [32m0[39m:
+[32m-> [39m[32m2647[39m     [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m(
+[32m   2648[39m         [33m"[39m[33mError(s) in loading state_dict for [39m[38;5;132;01m{}[39;00m[33m:[39m[38;5;130;01m\n[39;00m[38;5;130;01m\t[39;00m[38;5;132;01m{}[39;00m[33m"[39m.format(
+[32m   2649[39m             [38;5;28mself[39m.[34m__class__[39m.[34m__name__[39m, [33m"[39m[38;5;130;01m\n[39;00m[38;5;130;01m\t[39;00m[33m"[39m.join(error_msgs)
+[32m   2650[39m         )
+[32m   2651[39m     )
+[32m   2652[39m [38;5;28;01mreturn[39;00m _IncompatibleKeys(missing_keys, unexpected_keys)
+
+[31mRuntimeError[39m: Error(s) in loading state_dict for SpatViT:
+	Unexpected key(s) in state_dict: "blocks.12.norm1.weight", "blocks.12.norm1.bias", "blocks.12.attn.qkv.weight", "blocks.12.attn.qkv.bias", "blocks.12.attn.sampling_offsets.weight", "blocks.12.attn.sampling_offsets.bias", "blocks.12.attn.proj.weight", "blocks.12.attn.proj.bias", "blocks.12.norm2.weight", "blocks.12.norm2.bias", "blocks.12.mlp.fc1.weight", "blocks.12.mlp.fc1.bias", "blocks.12.mlp.fc2.weight", "blocks.12.mlp.fc2.bias", "blocks.13.norm1.weight", "blocks.13.norm1.bias", "blocks.13.attn.qkv.weight", "blocks.13.attn.qkv.bias", "blocks.13.attn.sampling_offsets.weight", "blocks.13.attn.sampling_offsets.bias", "blocks.13.attn.proj.weight", "blocks.13.attn.proj.bias", "blocks.13.norm2.weight", "blocks.13.norm2.bias", "blocks.13.mlp.fc1.weight", "blocks.13.mlp.fc1.bias", "blocks.13.mlp.fc2.weight", "blocks.13.mlp.fc2.bias", "blocks.14.norm1.weight", "blocks.14.norm1.bias", "blocks.14.attn.qkv.weight", "blocks.14.attn.qkv.bias", "blocks.14.attn.proj.weight", "blocks.14.attn.proj.bias", "blocks.14.norm2.weight", "blocks.14.norm2.bias", "blocks.14.mlp.fc1.weight", "blocks.14.mlp.fc1.bias", "blocks.14.mlp.fc2.weight", "blocks.14.mlp.fc2.bias", "blocks.15.norm1.weight", "blocks.15.norm1.bias", "blocks.15.attn.qkv.weight", "blocks.15.attn.qkv.bias", "blocks.15.attn.sampling_offsets.weight", "blocks.15.attn.sampling_offsets.bias", "blocks.15.attn.proj.weight", "blocks.15.attn.proj.bias", "blocks.15.norm2.weight", "blocks.15.norm2.bias", "blocks.15.mlp.fc1.weight", "blocks.15.mlp.fc1.bias", "blocks.15.mlp.fc2.weight", "blocks.15.mlp.fc2.bias", "blocks.16.norm1.weight", "blocks.16.norm1.bias", "blocks.16.attn.qkv.weight", "blocks.16.attn.qkv.bias", "blocks.16.attn.sampling_offsets.weight", "blocks.16.attn.sampling_offsets.bias", "blocks.16.attn.proj.weight", "blocks.16.attn.proj.bias", "blocks.16.norm2.weight", "blocks.16.norm2.bias", "blocks.16.mlp.fc1.weight", "blocks.16.mlp.fc1.bias", "blocks.16.mlp.fc2.weight", "blocks.16.mlp.fc2.bias", "blocks.17.norm1.weight", "blocks.17.norm1.bias", "blocks.17.attn.qkv.weight", "blocks.17.attn.qkv.bias", "blocks.17.attn.proj.weight", "blocks.17.attn.proj.bias", "blocks.17.norm2.weight", "blocks.17.norm2.bias", "blocks.17.mlp.fc1.weight", "blocks.17.mlp.fc1.bias", "blocks.17.mlp.fc2.weight", "blocks.17.mlp.fc2.bias", "blocks.18.norm1.weight", "blocks.18.norm1.bias", "blocks.18.attn.qkv.weight", "blocks.18.attn.qkv.bias", "blocks.18.attn.sampling_offsets.weight", "blocks.18.attn.sampling_offsets.bias", "blocks.18.attn.proj.weight", "blocks.18.attn.proj.bias", "blocks.18.norm2.weight", "blocks.18.norm2.bias", "blocks.18.mlp.fc1.weight", "blocks.18.mlp.fc1.bias", "blocks.18.mlp.fc2.weight", "blocks.18.mlp.fc2.bias", "blocks.19.norm1.weight", "blocks.19.norm1.bias", "blocks.19.attn.qkv.weight", "blocks.19.attn.qkv.bias", "blocks.19.attn.sampling_offsets.weight", "blocks.19.attn.sampling_offsets.bias", "blocks.19.attn.proj.weight", "blocks.19.attn.proj.bias", "blocks.19.norm2.weight", "blocks.19.norm2.bias", "blocks.19.mlp.fc1.weight", "blocks.19.mlp.fc1.bias", "blocks.19.mlp.fc2.weight", "blocks.19.mlp.fc2.bias", "blocks.20.norm1.weight", "blocks.20.norm1.bias", "blocks.20.attn.qkv.weight", "blocks.20.attn.qkv.bias", "blocks.20.attn.proj.weight", "blocks.20.attn.proj.bias", "blocks.20.norm2.weight", "blocks.20.norm2.bias", "blocks.20.mlp.fc1.weight", "blocks.20.mlp.fc1.bias", "blocks.20.mlp.fc2.weight", "blocks.20.mlp.fc2.bias", "blocks.21.norm1.weight", "blocks.21.norm1.bias", "blocks.21.attn.qkv.weight", "blocks.21.attn.qkv.bias", "blocks.21.attn.sampling_offsets.weight", "blocks.21.attn.sampling_offsets.bias", "blocks.21.attn.proj.weight", "blocks.21.attn.proj.bias", "blocks.21.norm2.weight", "blocks.21.norm2.bias", "blocks.21.mlp.fc1.weight", "blocks.21.mlp.fc1.bias", "blocks.21.mlp.fc2.weight", "blocks.21.mlp.fc2.bias", "blocks.22.norm1.weight", "blocks.22.norm1.bias", "blocks.22.attn.qkv.weight", "blocks.22.attn.qkv.bias", "blocks.22.attn.sampling_offsets.weight", "blocks.22.attn.sampling_offsets.bias", "blocks.22.attn.proj.weight", "blocks.22.attn.proj.bias", "blocks.22.norm2.weight", "blocks.22.norm2.bias", "blocks.22.mlp.fc1.weight", "blocks.22.mlp.fc1.bias", "blocks.22.mlp.fc2.weight", "blocks.22.mlp.fc2.bias", "blocks.23.norm1.weight", "blocks.23.norm1.bias", "blocks.23.attn.qkv.weight", "blocks.23.attn.qkv.bias", "blocks.23.attn.proj.weight", "blocks.23.attn.proj.bias", "blocks.23.norm2.weight", "blocks.23.norm2.bias", "blocks.23.mlp.fc1.weight", "blocks.23.mlp.fc1.bias", "blocks.23.mlp.fc2.weight", "blocks.23.mlp.fc2.bias". 
+	size mismatch for pos_embed: copying a param with shape torch.Size([1, 256, 1024]) from checkpoint, the shape in current model is torch.Size([1, 256, 768]).
+	size mismatch for DR.weight: copying a param with shape torch.Size([128, 4096, 1]) from checkpoint, the shape in current model is torch.Size([128, 3072, 1]).
+	size mismatch for classifier.0.weight: copying a param with shape torch.Size([128, 4096]) from checkpoint, the shape in current model is torch.Size([128, 3072]).
+	size mismatch for patch_embed.proj.weight: copying a param with shape torch.Size([1024, 30, 2, 2]) from checkpoint, the shape in current model is torch.Size([768, 30, 2, 2]).
+	size mismatch for patch_embed.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.0.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.0.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.0.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.0.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.0.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.0.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.0.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.0.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.0.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.1.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.1.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.1.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.1.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.1.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.1.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.1.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.1.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.1.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.2.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.2.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.2.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.2.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.2.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.2.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.2.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.3.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.3.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.3.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.3.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.3.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.3.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.3.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.3.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.3.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.4.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.4.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.4.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.4.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.4.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.4.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.4.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.4.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.4.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.5.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.5.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.5.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.5.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.5.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.5.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.5.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.6.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.6.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.6.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.6.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.6.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.6.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.6.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.6.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.6.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.7.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.7.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.7.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.7.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.7.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.7.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.7.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.7.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.7.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.8.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.8.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.8.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.8.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.8.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.8.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.8.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.9.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.9.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.9.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.9.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.9.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.9.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.9.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.9.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.9.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.10.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.10.attn.sampling_offsets.weight: copying a param with shape torch.Size([256, 1024]) from checkpoint, the shape in current model is torch.Size([192, 768]).
+	size mismatch for blocks.10.attn.sampling_offsets.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([192]).
+	size mismatch for blocks.10.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.10.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.10.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.10.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.10.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.10.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.norm1.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.norm1.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.attn.qkv.weight: copying a param with shape torch.Size([3072, 1024]) from checkpoint, the shape in current model is torch.Size([2304, 768]).
+	size mismatch for blocks.11.attn.qkv.bias: copying a param with shape torch.Size([3072]) from checkpoint, the shape in current model is torch.Size([2304]).
+	size mismatch for blocks.11.attn.proj.weight: copying a param with shape torch.Size([1024, 1024]) from checkpoint, the shape in current model is torch.Size([768, 768]).
+	size mismatch for blocks.11.attn.proj.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.norm2.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.norm2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for blocks.11.mlp.fc1.weight: copying a param with shape torch.Size([4096, 1024]) from checkpoint, the shape in current model is torch.Size([3072, 768]).
+	size mismatch for blocks.11.mlp.fc1.bias: copying a param with shape torch.Size([4096]) from checkpoint, the shape in current model is torch.Size([3072]).
+	size mismatch for blocks.11.mlp.fc2.weight: copying a param with shape torch.Size([1024, 4096]) from checkpoint, the shape in current model is torch.Size([768, 3072]).
+	size mismatch for blocks.11.mlp.fc2.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for norm.weight: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for norm.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for fpn1.0.weight: copying a param with shape torch.Size([1024, 1024, 2, 2]) from checkpoint, the shape in current model is torch.Size([768, 768, 2, 2]).
+	size mismatch for fpn1.0.bias: copying a param with shape torch.Size([1024]) from checkpoint, the shape in current model is torch.Size([768]).
+
+=== Fri 13 Nov 15:22:44 GMT 2026 queued ===
+Python: /home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/bin/python
+Waiting until no process is using the GPU.
+=== Fri 13 Nov 15:22:44 GMT 2026 GPU free, starting SpatSigma ===
+[NbConvertApp] Converting notebook demo cls spatsigma.ipynb to notebook
+[NbConvertApp] Writing 125550 bytes to demo cls spatsigma.ipynb
+=== Fri 13 Nov 15:29:25 GMT 2026 SpatSigma finished ===
+=== Fri 13 Nov 15:29:25 GMT 2026 starting HyperSigma ===
+[NbConvertApp] Converting notebook demo cls hypersigma.ipynb to notebook
+[NbConvertApp] Writing 167272 bytes to demo cls hypersigma.ipynb
+=== Fri 13 Nov 15:39:13 GMT 2026 both notebooks finished ===
+=== Fri 13 Nov 15:54:55 GMT 2026 queued ===
+Python: /home/campus.ncl.ac.uk/c4071391/miniconda3/envs/hyperfm/bin/python
+Waiting until no process is using the GPU.
+=== Fri 13 Nov 15:54:55 GMT 2026 GPU free, starting SpatSigma ===
+[NbConvertApp] Converting notebook demo cls spatsigma.ipynb to notebook
+[NbConvertApp] Writing 148579 bytes to demo cls spatsigma.ipynb
+=== Fri 13 Nov 16:21:42 GMT 2026 SpatSigma finished ===
+=== Fri 13 Nov 16:21:42 GMT 2026 starting HyperSigma ===
+[NbConvertApp] Converting notebook demo cls hypersigma.ipynb to notebook
+[NbConvertApp] Writing 183752 bytes to demo cls hypersigma.ipynb
+=== Fri 13 Nov 17:07:50 GMT 2026 both notebooks finished ===
